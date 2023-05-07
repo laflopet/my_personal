@@ -1,0 +1,11 @@
+asgiref==3.6.0
+beautifulsoup4==4.12.2
+cssutils==2.6.0
+Django==4.1.7
+future==0.18.3
+gunicorn==20.1.0
+psycopg2==2.9.6
+pynliner==0.8.0
+soupsieve==2.4.1
+sqlparse==0.4.3
+tzdata==2023.2
