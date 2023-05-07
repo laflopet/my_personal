@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../static/creado.css">
+</head>
+<body>
+    <section>
+        <div class="clasediv">
+            <div class="felicidades">
+                Felicidades <span class="nombre">{{nombre}}</span>
+            </div>
+            <div class="email">
+                Hemos enviado un e-mail a <span class="mail">{{email}}</span> <span class="check">&check;</span>
+            </div>
+            <a href="{% url 'inicio' %}">Regresar al Inicio</a>
+        </div>
+    </section>
+</body>
+</html>

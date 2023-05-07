@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARCA PERSONAL</title>
+    <link rel="stylesheet" href="../static/estilos.css">
+    <script src="https://use.fontawesome.com/0356d327c7.js"></script>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="logo">Lázaro Flórez<span class="symbol"></span></div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#acercade">Acerca De</a>
+                <a href="#ayuda">Ayuda</a>
+                <a href="#blog">Blog</a>
+            </nav>
+            <form action="login">
+            <button>Iniciar Sesión</button>
+            </form>
+            <div class="redes-sociales">
+                <a href="http://www.facebook.com" target="_blank">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+                <a href="http://www.youtube.com" target="_blank">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+                <a href="http://www.twitter.com" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="http://www.instagram.com" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="parrafo-inicio">
+            <h1 id="titulo-inicio">Desarrollador Back-End</h1>
+            <p>Aquí podras encontrar servicios de programación de alta calidad y eficiencia para el desarrollo de la parte del servidor de tu sitio web o aplicación. Con mi experiencia en Python y habilidades de programación, puedo crear soluciones personalizadas y satisfacer tus necesidades específicas. Estoy comprometido con la entrega de proyectos dentro de los plazos establecidos y garantizar la satisfacción del cliente. Contacta conmigo para obtener más información sobre cómo puedo ayudarte a llevar tu negocio al siguiente nivel.</p>
+        </div>
+    </section>
+    <section>
+        <div class="suscripcion">
+            <h2>Suscribete para mas información</h2>
+        </div>
+    </section>
+    <section>
+        <div class="etiquetas">
+            <form method="POST" action="{% url 'suscripcion' %}">
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="50" required><br>
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email" name="email" required><br>
+                <button type="submit">Enviar</button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </section>  
+    <footer>
+        <div class="pie">
+            <p>&copy; Laflopet99</p>
+            <form action="{% url 'eliminar_registros' %}">
+                <button type="submit">Eliminar Registros</button>
+            </form>
+            <form action="{% url 'abrir_formulario' %}">
+            <button type="submit">ir a formulario email</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

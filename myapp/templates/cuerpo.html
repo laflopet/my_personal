@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar</title>
+    <link rel="stylesheet" href="../static/cuerpo-correo.css">
+    <style>
+        .encabezado {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.encabezado .titulo {
+    background:linear-gradient(rgb(90,90,90), rgb(120,120,120));
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.encabezado .cuerpito {
+    font-size: 20px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+.cuerpo-correo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cuerpo-correo .cuerpo-parrafo {
+    font-size: 1.3em;
+}
+.cuerpo-correo .desarrollo{
+    font-size: 1.3em;
+}
+.boton {
+    display: flex;
+    justify-content: center;
+}
+button {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: brown;
+    border-bottom: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <h1 class="titulo">Lázaro Flórez</h1>
+            <h3 class="cuerpito">Notificación <span>Servicios Web</span></h3>
+        </div>
+    </header>
+    <sectio>
+        <div class="cuerpo-correo">
+            <p class="cuerpo-parrafo">
+                Quiero que conozcas un poco hacerca de este proyecto personal.
+            </p>
+            <p class="desarrollo">
+                Fue desarrollado en Django y se incluyen tecnologias como HTML y CSS asi como la base de datos de Postgresql
+            </p>
+        </div>
+        <div class="boton">
+        <form action="http://www.google.com.co/">
+        <button type="submit">Iniciar Sesión</button>
+        </form>
+        </div>
+    </section>
+    <footer>
+        <div class="pie">
+            <p class="parrafo-pie">
+                &copy;laflopet99
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
