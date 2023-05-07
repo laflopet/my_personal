@@ -144,7 +144,7 @@ decouple = es una libreria que nos permite leer vaiables de entorno
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'myapp/static'),
 ]
 STATIC_ROOT = "../myapp/static"
 
