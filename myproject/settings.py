@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure--r7osj##5p5p#g(wqlx$hm!u$d%g6g=i4acf$#$$v%pzmx3%mu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,11 +88,11 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'basedatos',
-        'USER': 'postgres',
-        'PASSWORD': 'djanimo2018',
-        'HOST': 'database-2.cxkedyic9bxn.us-east-2.rds.amazonaws.com',
-        'PORT': '5432',
+        'NAME': config('NAME_BD'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASS'),
+        'HOST': config('HOST_DB'),
+        'PORT': config('PORT_DB'),  
     }
 }
 
@@ -134,9 +135,9 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER = "lazaroflorez79@gmail.com"
-EMAIL_HOST_PASSWORD = "aqgwiyfzkpxseuue"
-EMAIL_PORT = 587
+EMAIL_HOST_USER = config('MAIL')
+EMAIL_HOST_PASSWORD = config('PASSWORD_MAIL')
+EMAIL_PORT = config('PORT_MAIL')
 
 """
 decouple = es una libreria que nos permite leer vaiables de entorno
