@@ -17,7 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from myapp.views import inicio
+from myapp.views import inicio, inicio_app, acercade
 from usuarios.views import suscripcion, IniciarSesion, eliminar_registros
 from emails.views import enviar_email, envio_correo, abrir_formulario
 
@@ -30,5 +30,7 @@ urlpatterns = [
     path('login/', IniciarSesion),
     path('eliminar/registros', eliminar_registros, name='eliminar_registros'),
     path('enviar_email', envio_correo, name='enviar_email'),
-    path('formulario/', abrir_formulario, name='abrir_formulario')
+    path('formulario/', abrir_formulario, name='abrir_formulario'),
+    path('inicio/', inicio_app, name='inicio_app'),
+    path('skills/', acercade, name='acerca_de')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

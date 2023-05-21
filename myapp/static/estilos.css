@@ -31,7 +31,9 @@ header .encabezado{
     flex-direction: column;
     text-align: center;
     align-items: center;
+    
 }
+
 header nav {
     display: flex;
     flex-direction: column;
